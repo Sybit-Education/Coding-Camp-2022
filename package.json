@@ -1,0 +1,41 @@
+{
+  "name": "coding-camp-2022-intern",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "airtable": "^0.11.3",
+    "core-js": "^3.6.5",
+    "dotenv": "^16.0.0",
+    "feather-icons": "^4.29.0",
+    "pinia": "^2.0.14",
+    "register-service-worker": "^1.7.2",
+    "vue": "^3.0.0",
+    "vue-feather": "^2.0.0",
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.0-0",
+    "vuex-persist": "^3.1.3"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.10",
+    "@vue/cli-plugin-eslint": "~4.5.10",
+    "@vue/cli-plugin-pwa": "~4.5.10",
+    "@vue/cli-plugin-router": "~4.5.10",
+    "@vue/cli-plugin-vuex": "~4.5.10",
+    "@vue/cli-service": "~4.5.10",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "naive-ui": "^2.28.2"
+  }
+}
