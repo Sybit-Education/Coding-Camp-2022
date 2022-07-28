@@ -4,6 +4,9 @@ Dsa Sybit Coding Camp 2022 findet im Rahmen des Sommerferienprogramms der Stadt 
 
 Weitere informationen unter https://coding-camp.sybit.de
 
+## Naive UI
+https://www.naiveui.com/en-US/os-theme/docs/installation
+
 ## Icons
 https://fengyuanchen.github.io/vue-feather/
 
