@@ -7,6 +7,9 @@ Weitere informationen unter https://coding-camp.sybit.de
 ## Icons
 https://fengyuanchen.github.io/vue-feather/
 
+## Pinia Store
+https://pinia.vuejs.org/introduction.html
+
 ## Project setup
 ```
 npm install
