@@ -1,8 +1,8 @@
 <template>
   <n-space justify="center">
-    <n-grid :y-gap="10" :x-gap="10" cols="1 s:3 m:4 l:5 xl:6 2xl:7" responsive="screen">
+    <n-grid :y-gap="15" :x-gap="10" cols="1 s:2 m:3 l:4 xl:5 2xl:6" responsive="screen">
         <n-gi v-for="item in list" :key="item.id">
-                <event-card  :item="item" />
+            <event-card  :item="item" />
          </n-gi>
     </n-grid>
   </n-space>
