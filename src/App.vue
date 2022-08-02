@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <n-spin :show="loading">
-      <router-view/>
+      <router-view />
+        <n-button text @click="this.$router.push({name:'Impressum'})">Impressum</n-button>
+        <n-button text @click="this.$router.push({name:'Datenschutz'})">Datenschutz</n-button>
     </n-spin>
   </div>
 </template>
