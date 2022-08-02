@@ -1,5 +1,8 @@
 <template>
-<p>{{ this.place }}</p>
+<div>
+    <vue-feather type="map-pin" size="15" />
+    {{ this.place }}
+</div>
 </template>
 
 <script>

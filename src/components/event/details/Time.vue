@@ -1,5 +1,6 @@
 <template>
-<p>Wann: {{ this.time }}</p>
+<vue-feather type="clock" size="15" />
+    {{ this.time }} Uhr
 </template>
 
 <script>
