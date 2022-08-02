@@ -3,7 +3,7 @@
 </template>
 
 <script>
-
+import { useEventStore } from '../store/event.store'
 export default {
   name: 'Home',
   data () {
@@ -12,6 +12,12 @@ export default {
       eventList: [],
       searchInput: ''
     }
+  },
+  created () {
+    const eventStore = useEventStore()
+    eventStore.fetchEventRecords().then(list => {
+      this.eventList = list
+    })
   }
 }
 </script>
