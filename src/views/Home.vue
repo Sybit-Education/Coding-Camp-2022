@@ -1,5 +1,6 @@
 <template>
   <h1>Coding Camp 2022</h1>
+  Das ist ein test
 </template>
 
 <script>
