@@ -1,11 +1,13 @@
 <template>
-  <h1>Coding Camp 2022</h1>
+  <event-list :list="eventList" />
 </template>
 
 <script>
 import { useEventStore } from '../store/event.store'
+import EventList from '../components/event/List.vue'
 export default {
   name: 'Home',
+  components: { EventList },
   data () {
     return {
       // TODO: Data from Airtable
