@@ -12,7 +12,10 @@
 
 <style>
 .gruppenbild{
-    height: 250px;
     text-align: center;
+    width: 90%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 </style>
