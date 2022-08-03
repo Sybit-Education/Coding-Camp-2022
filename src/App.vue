@@ -1,5 +1,6 @@
 <template>
-  <div id="app">
+  <n-config-provider :theme-overrides="customTheme">
+    <div id="app">
     <n-spin :show="loading">
       <router-view />
       <div id="buttons">
@@ -8,12 +9,23 @@
       </div>
     </n-spin>
   </div>
+  </n-config-provider>
 </template>
 
 <script>
 import { useLoadingStore } from '@/store/loading.store'
+import { NConfigProvider } from 'naive-ui'
+import customTheme from '@/naive-ui-theme-overrides.json'
 
 export default {
+  components: {
+    NConfigProvider
+  },
+  data () {
+    return {
+      customTheme
+    }
+  },
   computed: {
     loading () {
       return useLoadingStore().showLoadingSpinner

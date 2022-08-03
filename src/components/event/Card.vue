@@ -33,14 +33,14 @@
 <style scoped>
 .n-card {
   width: 350px;
-  height: 250px;
+  height: 400px;
 }
 
 @media only screen and (max-width: 600px) {
-  .n-card {
-    width: 325px;
-    height: 350px;
-  }
+.n-card {
+  width: 325px;
+  height: 435px;
+}
 }
 </style>
 
