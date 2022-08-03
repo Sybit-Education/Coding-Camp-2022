@@ -1,5 +1,6 @@
 <template>
     <h1> Über uns </h1>
+    <h2> Coding Camp 2022 hi</h2>
     <div class="gruppenbild">
     <img src="https://lh3.googleusercontent.com/pw/AL9nZEXpU-XxkCZn0_U4y3u6L1P3GajNodVuq9f_QxNgdNsxnV2XBcglGvTlCmW0j8qhEbagy0Fsfqvb5-vTG-UuK4Xeg1s98uFmIkIZxFAkN48MH7N_AWrRvQgELlMqz6bjVnpd4PUaLi022zCT-KUBXgRn8w=w1215-h911-no?authuser=0" class="gruppenbild"/>
     </div>
@@ -8,14 +9,15 @@
     <p>Durch die Woche konnte unser 10-köpfiges Team, welches aus Schülern verschiedenen Alters bestand, einen Einblick in den Alltag des Ausbildungsberufes des Fachinformatikers für Anwendungsentwicklung erhalten.</p>
     <p>Dabei halfen uns die Auszubildenden, die in eben diesem Beruf ihre Ausbildung absolvieren, da wir in einer Woche natürlich nicht die Programmiersprache die wir nutzten erlernen konnten.</p>
     <p>Wir hoffen, dass Ihnen unsere Web-App gefällt! Viel Spaß weiterhin auf unseren Seiten!</p>
+
 </template>
 
 <style>
-.gruppenbild{
-    text-align: center;
-    width: 90%;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+img{
+    max-width: 100%;
+    height: auto;
+    width: auto/9; /* ie8 */
+    img-align: center;
 }
+
 </style>

@@ -11,5 +11,5 @@ E-Mail: <a href="mailto:info@sybit.de">info@sybit.de</a><br />
 <strong>Aufsichtsbehörde: </strong>Bundesbeaufragter für den Datenschutz und die Informationsfreiheit<br />
 <br /><h2>Hinweis gem&auml;&szlig; Verbraucherstreitbeilegungsgesetz (VSBG)</h2>
 <p>Wir sind nicht bereit und verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
-<p>Quelle: <a href="https://www.juraforum.de/impressum-generator/">Weiter</a></p>
+
 </template>
