@@ -11,6 +11,9 @@
  <div class="gruppenbild">
     <img src="../../public/img/pictures/group.png" class="gruppenbild"/>
 </div>
+<div id="bildunterschrift">
+   Text unterm Bild (Platzhalter)
+</div>
 </template>
 
 <script>
@@ -28,6 +31,10 @@ export default {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+}
+#bildunterschrift{
+   text-align: center;
+   font-size: 75%;
 }
 h1{
    text-align: center;
