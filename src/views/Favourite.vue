@@ -1,28 +1,36 @@
 <template>
-  <search @search="eventList = $event" />
-  <event-list v-if="eventList.length" :list="eventList" />
-  <n-alert v-else title="Keine Angebote gefunden!" type="warning" />
+    <n-button @click="this.$router.push({name:'Home'})">
+    <vue-feather type="arrow-left"/>
+    </n-button>
+  <favourite-list v-if="favouriteList.length" :list="favouriteList" />
+  <n-alert v-else title="Keine Favoriten gefunden!" type="warning" />
 </template>
 
 <script>
-import { useEventStore } from '../store/event.store'
-import EventList from '../components/event/List.vue'
-import Search from '../components/Search.vue'
+import { useFavoriteStore } from '../store/favorite.store'
+import FavouriteList from '../components/favourite/FavouriteList.vue'
+import { useEventStore } from '@/store/event.store'
 export default {
   name: 'Favourite',
-  components: { EventList, Search },
+  components: { FavouriteList },
   data () {
     return {
       // TODO: Data from Airtable
-      eventList: [],
+      favouriteList: [],
       searchInput: ''
     }
   },
   created () {
-    const eventStore = useEventStore()
-    eventStore.fetchEventRecords().then(list => {
-      this.eventList = list
-    })
+    const favoriteStore = useFavoriteStore()
+    const favList = favoriteStore.getFavoriteList
+    const list = []
+    if (favList && favList.length > 0) {
+      const eventStore = useEventStore()
+      for (let i = 0; i < favList.length; i++) {
+        list.push(eventStore.getEventById(favList[i]))
+      }
+      this.favouriteList = list
+    }
   }
 }
 </script>
