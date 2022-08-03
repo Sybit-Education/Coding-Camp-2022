@@ -9,6 +9,9 @@
         <h2><event-name :event="event"></event-name></h2>
       </div>
       <div>
+        <weiterfuehrender-link :event="event"/>
+      </div>
+      <div>
         <event-date :date="event.date"></event-date>
       </div>
       <div>
@@ -28,6 +31,7 @@
   </n-grid>
 </template>
 <script>
+import WeiterfuehrenderLink from '@/components/event/details/WeiterführenderLink'
 import EventDate from '@/components/event/details/Date'
 import EventDescription from '@/components/event/details/Description'
 import EventName from '@/components/event/details/Name'
@@ -44,7 +48,8 @@ export default {
     EventDescription,
     EventPlace,
     EventPrice,
-    EventTopBar
+    EventTopBar,
+    WeiterfuehrenderLink
   },
   data () {
     return {
