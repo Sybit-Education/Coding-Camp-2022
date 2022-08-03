@@ -6,20 +6,25 @@
     <div :style="`margin: 0 0 10px 0; display: ${toggle ? '' : 'none'}`">
       <category-filter @update="filter.categories = $event; filterEvents()" />
     </div>
+    <div :style="`margin: 0 0 10px 0; display: ${toggle ? '' : 'none'}`">
+    <age-range-filter @update="filter.dateRange = $event; filterEvents()"/>
+    </div>
 </template>
 
 <script>
 import { useEventStore } from '../../store/event.store'
 import CategoryFilter from './Category.vue'
+import AgeRangeFilter from './AgeFilter.vue'
 export default {
-  components: { CategoryFilter },
+  components: { CategoryFilter, AgeRangeFilter },
   name: 'Filter',
   data () {
     return {
       toggle: false,
       eventList: [],
       filter: {
-        categories: []
+        categories: [],
+        ageRange: []
       }
     }
   },
@@ -31,7 +36,7 @@ export default {
   },
   methods: {
     filterEvents () {
-      const list = this.filterByCategory(this.eventList)
+      const list = this.filterByCategory(this.filterByAge(this.eventList))
       this.$emit('filter', list)
     },
     filterByCategory (events) {
@@ -52,8 +57,22 @@ export default {
       } else {
         return events
       }
+    },
+    filterByAge: function (events) {  
+  console.log('filterAge')
+  const range = this.filter.ageRange
+  if (range?.length===2){ 
+    if (range[0] > range[1]){
+      const tmp = range[1]
+      range[1] = range[0]
+      range[0] = tmp
     }
+    return events.filter(event => (this.filterValues(range[0], range[1], event.minAge)) ? event :'')
+  } else {
+    return events
   }
+  }
+}
 }
 
 </script>

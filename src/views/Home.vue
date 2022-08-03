@@ -1,4 +1,7 @@
 <template>
+<p>
+    <vue-feather type="loader" animation="spin" animation-speed="slow"></vue-feather>
+  </p>
   <search @search="eventList = $event" />
     <Filter @filter="eventList = $event" />
   <event-list v-if="eventList.length" :list="eventList" />
