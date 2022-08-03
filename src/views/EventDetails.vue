@@ -24,7 +24,7 @@
       <div>
         <event-description :event="event"></event-description>
       </div>
-      <contact-info></contact-info>
+      <contact-info :event="event"></contact-info>
     </n-gi>
   </n-grid>
 </template>
