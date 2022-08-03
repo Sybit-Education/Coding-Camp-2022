@@ -1,5 +1,5 @@
 <template>
-  <event-top-bar></event-top-bar>
+  <event-top-bar :event="event"></event-top-bar>
   <n-grid cols="1 m:12 l:12" responsive="screen" v-if="event && event.id">
     <n-gi :span="3">
       <n-image v-if="event.images" width="250" :src="event.images[0].url" />
@@ -9,6 +9,9 @@
         <h2><event-name :event="event"></event-name></h2>
       </div>
       <div>
+        <event-date :date="event.date"></event-date>
+      </div>
+       <div>
         <event-date :date="event.date"></event-date>
       </div>
       <div>

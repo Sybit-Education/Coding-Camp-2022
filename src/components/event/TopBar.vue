@@ -10,12 +10,22 @@
           })
         "
     /></n-gi>
-    <n-gi class="share"><vue-feather type="share-2" size="30" /></n-gi>
+    <n-gi class="share"><share-button :event="event"></share-button></n-gi>
   </n-grid>
 </template>
 <script>
+import ShareButton from '@/components/event/details/ShareButton'
 export default {
-  name: 'EventTopBar'
+  name: 'EventTopBar',
+  components: {
+    ShareButton
+  },
+  props: {
+    event: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 <style scoped>
