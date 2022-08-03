@@ -43,10 +43,10 @@
 }
 
 @media only screen and (max-width: 600px) {
-.n-card {
-  width: 395px;
-  height: 495px;
-}
+  .n-card {
+    width: 395px;
+    height: 495px;
+  }
 }
 </style>
 
