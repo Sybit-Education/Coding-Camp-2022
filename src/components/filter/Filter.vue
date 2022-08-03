@@ -58,21 +58,21 @@ export default {
         return events
       }
     },
-    filterByAge: function (events) {  
-  console.log('filterAge')
-  const range = this.filter.ageRange
-  if (range?.length===2){ 
-    if (range[0] > range[1]){
-      const tmp = range[1]
-      range[1] = range[0]
-      range[0] = tmp
+    filterByAge: function (events) {
+      console.log('filterAge')
+      const range = this.filter.ageRange
+      if (range?.length === 2) {
+        if (range[0] > range[1]) {
+          const tmp = range[1]
+          range[1] = range[0]
+          range[0] = tmp
+        }
+        return events.filter(event => (this.filterValues(range[0], range[1], event.minAge)) ? event : '')
+      } else {
+        return events
+      }
     }
-    return events.filter(event => (this.filterValues(range[0], range[1], event.minAge)) ? event :'')
-  } else {
-    return events
   }
-  }
-}
 }
 
 </script>
