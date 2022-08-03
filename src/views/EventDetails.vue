@@ -24,6 +24,7 @@
       <div>
         <event-description :event="event"></event-description>
       </div>
+      <contact-info></contact-info>
     </n-gi>
   </n-grid>
 </template>
@@ -31,6 +32,7 @@
 import EventDate from '@/components/event/details/Date'
 import EventDescription from '@/components/event/details/Description'
 import EventName from '@/components/event/details/Name'
+import ContactInfo from '@/components/event/details/ContactInfo'
 import EventPlace from '@/components/event/details/Place'
 import EventPrice from '@/components/event/details/Price'
 import EventTopBar from '@/components/event/TopBar'
@@ -44,6 +46,7 @@ export default {
     EventDescription,
     EventPlace,
     EventPrice,
+    ContactInfo,
     EventTopBar
   },
   data () {
