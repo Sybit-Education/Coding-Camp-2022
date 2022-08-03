@@ -3,14 +3,21 @@
     <n-gi>
       <BackBtn/>
     </n-gi>
-    <n-gi class="share"><vue-feather type="share-2" size="30" /></n-gi>
+    <n-gi class="share"><share-button :event="event"></share-button></n-gi>
   </n-grid>
 </template>
 <script>
+import ShareButton from '@/components/event/details/ShareButton'
 import BackBtn from './details/BackBtn.vue'
 export default {
   name: 'EventTopBar',
-  components: { BackBtn }
+  components: { BackBtn, ShareButton },
+  props: {
+    event: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 <style scoped>
