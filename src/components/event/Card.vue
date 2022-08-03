@@ -1,7 +1,6 @@
 <template>
   <n-space justify="center">
     <n-card
-      :title="item.name"
       @click="
         this.$router.push({
           name: 'EventDetails',
@@ -9,6 +8,9 @@
         })
       "
     >
+      <template #header>
+        <h3>{{ item.name }}</h3>
+      </template>
       <template #cover>
         <event-image :item="item" />
       </template>
@@ -30,16 +32,20 @@
   </n-space>
 </template>
 
-<style scoped>
+<style>
+.n-card > .n-card-header {
+  padding: 0 0 0 25px !important;
+}
 .n-card {
+  cursor: pointer;
   width: 350px;
   height: 400px;
 }
 
 @media only screen and (max-width: 600px) {
 .n-card {
-  width: 325px;
-  height: 435px;
+  width: 395px;
+  height: 495px;
 }
 }
 </style>
