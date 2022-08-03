@@ -1,15 +1,18 @@
 <template>
-  <span class="event-title" v-if="event.date">{{ event.date }}</span>
+    <vue-feather type="calendar" size="15" />
+    {{ formatDate(this.date) }}
 </template>
+
 <script>
+import { DateMixin } from '@/mixins/date.mixin'
 export default {
   name: 'EventDate',
+  mixins: [DateMixin],
   props: {
-    event: {
+    date: {
+      type: String,
       required: true
     }
   }
 }
 </script>
-.event-title { font-weight: bold; font-size: large; padding: 0; }
-<style scoped></style>

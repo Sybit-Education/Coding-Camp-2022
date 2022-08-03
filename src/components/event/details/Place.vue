@@ -1,15 +1,18 @@
 <template>
-  <span class="event-title" v-if="event.place">{{ event.place }}</span>
+<div>
+    <vue-feather type="map-pin" size="15" />
+    {{ this.place }}
+</div>
 </template>
+
 <script>
 export default {
   name: 'EventPlace',
   props: {
-    event: {
+    place: {
+      type: String,
       required: true
     }
   }
 }
 </script>
-.event-title { font-weight: bold; font-size: large; padding: 0; }
-<style scoped></style>

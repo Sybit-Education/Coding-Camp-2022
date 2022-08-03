@@ -1,15 +1,16 @@
 <template>
-  <span class="event-title" v-if="event.time">{{ event.time }}</span>
+<vue-feather type="clock" size="15" />
+    {{ this.time }} Uhr
 </template>
+
 <script>
 export default {
   name: 'EventTime',
   props: {
-    event: {
+    time: {
+      type: String,
       required: true
     }
   }
 }
 </script>
-.event-title { font-weight: bold; font-size: large; padding: 0; }
-<style scoped></style>

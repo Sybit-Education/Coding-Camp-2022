@@ -1,15 +1,16 @@
 <template>
-  <span class="event-title" v-if="event.price">{{ event.price }}</span>
+<vue-feather type="tag" size="15" />
+    {{ this.price }}€
 </template>
+
 <script>
 export default {
   name: 'EventPrice',
   props: {
-    event: {
+    price: {
+      type: Number,
       required: true
     }
   }
 }
 </script>
-.event-title { font-weight: bold; font-size: large; padding: 0; }
-<style scoped></style>
