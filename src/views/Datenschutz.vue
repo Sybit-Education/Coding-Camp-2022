@@ -3,8 +3,8 @@
 <template>
  <back-btn/>
 <div>
-    <h2>Datenschutz</h2>
-    <h3>Rechtlichen Bedingungen</h3>
+    <h1>DATENSCHUTZ</h1>
+    <h2>Rechtlichen Bedingungen</h2>
 <p>Wir informieren Sie nachfolgend gemäß den gesetzlichen Vorgaben des Datenschutzrechts (insb. gemäß BDSG n.F. und der
 europäischen Datenschutz-Grundverordnung ‚DS-GVO‘ ) über die Art, den Umfang und Zweck der Verarbeitung personenbezogener Daten durch unser
 Unternehmen.Diese Datenschutzerklärung gilt auch für unsere Websites und Sozial-Media-Profile. Bezüglich der Definition von Begriffen wie etwa „personenbezogene Daten“ oder „Verarbeitung“ verweisen wir auf Art. 4 DS-GVO.</p>
