@@ -5,7 +5,7 @@
       <div id="buttons">
         <n-button text @click="this.$router.push({name:'Impressum'})">Impressum</n-button>
         <n-button text @click="this.$router.push({name:'Datenschutz'})">Datenschutz</n-button>
-        <n-button text @click="this.$router.push({name:'Ueber-Uns'})">Über uns</n-button>
+        <n-button text @click="this.$router.push({name:'UeberUns'})">Über uns</n-button>
       </div>
     </n-spin>
   </div>

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Impressum from '../views/Impressum.vue'
 import Datenschutz from '../views/Datenschutz.vue'
+import UeberUns from '../views/UeberUns.vue'
 
 const routes = [
   {
@@ -20,9 +21,9 @@ const routes = [
     component: Datenschutz
   },
   {
-    path: '/ueber-uns',
-    name: 'Über uns',
-    component: 'Über uns'
+    path: '/ueberuns',
+    name: 'UeberUns',
+    component: UeberUns
   }
 ]
 
