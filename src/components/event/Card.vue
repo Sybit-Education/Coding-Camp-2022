@@ -44,7 +44,7 @@
 
 @media only screen and (max-width: 600px) {
   .n-card {
-    width: 395px;
+    width: 380px;
     height: 495px;
   }
 }
