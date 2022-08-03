@@ -1,4 +1,5 @@
 <template>
+ <back-btn-vue/>
 <h1> Über uns </h1>
    <h2>Sybit Coding-Camp</h2>
    Das Sybit Coding-Camp findet jährlich statt und bietet Jugendlichen die Chance, einen Einblick in den Beruf von Softwareentwicklerinnen und Softwareentwicklern, sowie die Ausbildung als Fachinformatiker:in (Anwendungsentwicklung) zu erhalten. Die Auszubildenden des Unternehmens bereiten hierfür im Vorfeld ein Projekt vor und coachen die Jugendlichen während des Coding-Camps.
@@ -11,6 +12,14 @@
     <img src="https://lh3.googleusercontent.com/pw/AL9nZEXpU-XxkCZn0_U4y3u6L1P3GajNodVuq9f_QxNgdNsxnV2XBcglGvTlCmW0j8qhEbagy0Fsfqvb5-vTG-UuK4Xeg1s98uFmIkIZxFAkN48MH7N_AWrRvQgELlMqz6bjVnpd4PUaLi022zCT-KUBXgRn8w=w1215-h911-no?authuser=0" class="gruppenbild"/>
 </div>
 </template>
+
+<script>
+import BackBtnVue from '@/components/event/details/BackBtn.vue'
+
+export default {
+  components: { BackBtnVue }
+}
+</script>
 
 <style>
 .gruppenbild{
