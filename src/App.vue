@@ -6,6 +6,7 @@
       <div id="buttons">
         <n-button text @click="this.$router.push({name:'Impressum'})">Impressum</n-button>
         <n-button text @click="this.$router.push({name:'Datenschutz'})">Datenschutz</n-button>
+        <n-button text @click="this.$router.push({name:'UeberUns'})">Über uns</n-button>
         <n-button text @click="showContact = true"> Kontakt </n-button>
          <n-modal v-model:show="showContact">
           <n-card style="width: 600px" title="Café connect" :bordered="false" size="huge" role="dialog" aria-modal="true">
