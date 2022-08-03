@@ -22,15 +22,8 @@ export default {
     })
   }
 }
-
 </script>
 
 <style scoped>
-.hi {
-  color: black;
-  text-align: center;
-  font-family: "Arial";
-  font-size: 50px;
-}
 
 </style>
