@@ -1,6 +1,6 @@
 <template>
-    <a v-if="event.registration" :href="event.registration" class="link-möglich">ZUR BUCHUNG</a>
-    <span v-else-if="!event.registration" class="link-nicht-möglich">! BUCHUNG NICHT MÖGLICH !</span>
+    <a v-if="event.registration" :href="event.registration" class="link-möglich">Zur Anmeldung</a>
+    <span v-else-if="!event.registration" class="link-nicht-möglich">Online-Anmeldung nicht möglich</span>
 </template>
 <script>
 
