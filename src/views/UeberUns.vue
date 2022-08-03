@@ -8,7 +8,7 @@
  <p></p>
  <p></p>
  <div class="gruppenbild">
-    <img src="https://lh3.googleusercontent.com/pw/AL9nZEXpU-XxkCZn0_U4y3u6L1P3GajNodVuq9f_QxNgdNsxnV2XBcglGvTlCmW0j8qhEbagy0Fsfqvb5-vTG-UuK4Xeg1s98uFmIkIZxFAkN48MH7N_AWrRvQgELlMqz6bjVnpd4PUaLi022zCT-KUBXgRn8w=w1215-h911-no?authuser=0" class="gruppenbild"/>
+    <img src="../../public/img/pictures/group.png" class="gruppenbild"/>
 </div>
 </template>
 
