@@ -1,6 +1,6 @@
 <template>
   <back-btn/>
-    <h2>Impressum</h2>
+    <h1>IMPRESSUM</h1>
 <p>Sybit GmbH<br />
 Sankt-Johannis-Straße 1 - 5<br />78315 Radolfzell</p>
 <p>Telefon: 07732 95080<br />
