@@ -5,9 +5,8 @@
     </n-button>
     <div :style="`margin: 0 0 10px 0; display: ${toggle ? '' : 'none'}`">
       <category-filter @update="filter.categories = $event; filterEvents()" />
-    </div>
-    <div :style="`margin: 0 0 10px 0; display: ${toggle ? '' : 'none'}`">
-    <age-range-filter @update="filter.ageRange = $event; filterEvents()"/>
+      <price-filter @update="filter.price = $event; filterEvents()"/>
+      <age-range-filter @update="filter.ageRange = $event; filterEvents()"/>
     </div>
 </template>
 
@@ -15,8 +14,9 @@
 import { useEventStore } from '../../store/event.store'
 import CategoryFilter from './Category.vue'
 import AgeRangeFilter from './AgeFilter.vue'
+import PriceFilter from './Price.vue'
 export default {
-  components: { CategoryFilter, AgeRangeFilter },
+  components: { CategoryFilter, AgeRangeFilter, PriceFilter },
   name: 'Filter',
   data () {
     return {
@@ -24,6 +24,7 @@ export default {
       eventList: [],
       filter: {
         categories: [],
+        price: [],
         ageRange: []
       }
     }
@@ -36,11 +37,11 @@ export default {
   },
   methods: {
     filterEvents () {
-      const list = this.filterByCategory(this.filterByAge(this.eventList))
+      const list = this.filterByCategory(this.filterByPrice(this.filterByAge(this.eventList)))
       this.$emit('filter', list)
     },
-    filterValues (min, max, value) {
-      return value >= min && value <= max
+    filterValues (x, min, max) {
+      return x >= min && x <= max
     },
     filterByCategory (events) {
       if (this.filter.categories && this.filter.categories.length !== 0) {
@@ -69,9 +70,22 @@ export default {
           range[1] = range[0]
           range[0] = tmp
         }
-        return events.filter(event => (this.filterValues(range[0], range[1], event.minAge)) ? event : '')
+        return events.filter(event => (this.filterValues(event.minAge, range[0], range[1])) ? event : '')
       } else {
         return events
+      }
+    },
+    filterByPrice (events) {
+      const range = this.filter.price
+      if (range?.length === 2) {
+        if (range[0] > range[1]) {
+          const temp = range[0]
+          range[1] = range[0]
+          range[0] = temp
+        }
+        return events.filter(event => (this.filterValues(event.price, range[0], range[1])) ? event : '')
+      } else {
+        return (events)
       }
     }
   }
