@@ -4,6 +4,7 @@ import Impressum from '../views/Impressum.vue'
 import Datenschutz from '../views/Datenschutz.vue'
 import UeberUns from '../views/UeberUns.vue'
 import EventDetails from '../views/EventDetails.vue'
+import Favourite from '../views/Favourite.vue'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/ueberuns',
     name: 'UeberUns',
     component: UeberUns
+  },
+  {
+    path: '/favourite',
+    name: 'Favoriten',
+    component: Favourite
   }
 ]
 
