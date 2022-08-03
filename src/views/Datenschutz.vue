@@ -1,11 +1,12 @@
 <!-- eslint-disable no-irregular-whitespace -->
 <!-- eslint-disable no-tabs -->
 <template>
+ <back-btn/>
 <div>
     <h2>Datenschutz</h2>
     <h3>Rechtlichen Bedingungen</h3>
 <p>Wir informieren Sie nachfolgend gemäß den gesetzlichen Vorgaben des Datenschutzrechts (insb. gemäß BDSG n.F. und der
-europäischen Datenschutz-Grundverordnung ‚DS-GVO‘) über die Art, den Umfang und Zweck der Verarbeitung personenbezogener Daten durch unser
+europäischen Datenschutz-Grundverordnung ‚DS-GVO‘ ) über die Art, den Umfang und Zweck der Verarbeitung personenbezogener Daten durch unser
 Unternehmen.Diese Datenschutzerklärung gilt auch für unsere Websites und Sozial-Media-Profile. Bezüglich der Definition von Begriffen wie etwa „personenbezogene Daten“ oder „Verarbeitung“ verweisen wir auf Art. 4 DS-GVO.</p>
 <strong>Name und Kontaktdaten des / der Verantwortlichen</strong><br />
 Unser/e Verantwortliche/r (nachfolgend „Verantwortlicher“) i.S.d. Art. 4 Zif. 7 DS-GVO ist:<br />
@@ -231,3 +232,11 @@ Zu den Cookies zählen auch die sog. „Nutzer-IDs“, wo Angaben der Nutzer mit
 </div>
 
 </template>
+
+<script>
+import BackBtn from '@/components/event/details/BackBtn.vue'
+
+export default {
+  components: { BackBtn }
+}
+</script>
