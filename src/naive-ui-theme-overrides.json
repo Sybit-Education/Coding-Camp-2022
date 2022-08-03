@@ -5,7 +5,6 @@
   "common": {
     "fontFamily": "arial",
     "borderRadius": "10px",
-    "baseColor": "#000000FF",
     "successColorPressed": "#2EB146FF",
     "successColorSuppl": "#2BA761FF",
     "successColorHover": "#21D36FFF",
