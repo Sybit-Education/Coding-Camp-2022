@@ -10,14 +10,14 @@
         <event-name :event="event"></event-name>
       </div>
       <div>
-        <span class="event-description">Description:</span>
-        <br />
-        <event-description :event="event"></event-description>
-      </div>
-      <div>
         <span class="event-date">Date:</span>
         <br />
         <event-date :event="event"></event-date>
+      </div>
+      <div>
+        <span class="event-wtime">Time:</span>
+        <br />
+        <event-time :event="event"></event-time>
       </div>
       <div>
         <span class="event-location">Location:</span>
@@ -30,9 +30,9 @@
         <event-price :event="event"></event-price>
       </div>
       <div>
-        <span class="event-wtime">Time:</span>
+        <span class="event-description">Description:</span>
         <br />
-        <event-time :event="event"></event-time>
+        <event-description :event="event"></event-description>
       </div>
     </n-gi>
   </n-grid>
