@@ -1,36 +1,36 @@
 <template>
   <n-grid cols="1 m:12 l:12" responsive="screen">
     <n-gi :span="3">
-      <img width="280" :src="event.images[0].url" />
+      <event-image :item="event"></event-image>
     </n-gi>
     <n-gi :span="9">
       <div>
-        <spann class="event-name">Name:</spann>
+        <span class="event-name">Name:</span>
         <br />
         <event-name :event="event"></event-name>
       </div>
       <div>
-        <spann class="event-description">Description:</spann>
+        <span class="event-description">Description:</span>
         <br />
         <event-description :event="event"></event-description>
       </div>
       <div>
-        <spann class="event-date">Date:</spann>
+        <span class="event-date">Date:</span>
         <br />
         <event-date :event="event"></event-date>
       </div>
       <div>
-        <spann class="event-location">Location:</spann>
+        <span class="event-location">Location:</span>
         <br />
         <event-place :event="event"></event-place>
       </div>
       <div>
-        <spann class="event-price">Price:</spann>
+        <span class="event-price">Price:</span>
         <br />
         <event-price :event="event"></event-price>
       </div>
       <div>
-        <spann class="event-wtime">Time:</spann>
+        <span class="event-wtime">Time:</span>
         <br />
         <event-time :event="event"></event-time>
       </div>
@@ -44,6 +44,7 @@ import EventName from '@/components/event/details/Name'
 import EventPlace from '@/components/event/details/Place'
 import EventPrice from '@/components/event/details/Price'
 import EventTime from '@/components/event/details/Time'
+import EventImage from '@/components/event/Image'
 import { useEventStore } from '../store/event.store'
 
 export default {
@@ -54,7 +55,8 @@ export default {
     EventDescription,
     EventPlace,
     EventPrice,
-    EventTime
+    EventTime,
+    EventImage
   },
   data () {
     return {
