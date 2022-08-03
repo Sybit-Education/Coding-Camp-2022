@@ -61,6 +61,9 @@ export default {
 }
 </script>
 <style scoped>
+h2 {
+  margin-top: 0 !important;
+}
 .event-name {
   font-weight: bold;
   font-size: x-large;
