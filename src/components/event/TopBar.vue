@@ -2,6 +2,7 @@
   <n-grid cols="2 m:2 l:2" responsive="screen" class="top-bar">
     <n-gi
       ><vue-feather
+        class="back"
         type="arrow-left"
         size="30"
         @click="
@@ -19,9 +20,13 @@ export default {
 }
 </script>
 <style scoped>
+.back {
+  cursor: pointer;
+}
 .share {
+  cursor: pointer;
   position: absolute;
-  right: 0px;
+  right: 0;
 }
 .top-bar {
   margin-top: 10px

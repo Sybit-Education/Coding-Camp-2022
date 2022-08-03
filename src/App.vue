@@ -44,8 +44,10 @@ export default {
   padding: 0 7px 0 7px;
 }
 #buttons{
-  padding: 15px;
-  position: absolute;
-  margin-top: 590px;
+  display: flex;
+  justify-content: space-around;
+  bottom: 0;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 </style>
