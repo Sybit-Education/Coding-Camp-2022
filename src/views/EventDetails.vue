@@ -1,37 +1,27 @@
 <template>
-  <n-grid cols="1 m:12 l:12" responsive="screen">
+  <event-top-bar></event-top-bar>
+  <n-grid cols="1 m:12 l:12" responsive="screen" v-if="event && event.id">
     <n-gi :span="3">
-      <event-image :item="event"></event-image>
+      <n-image v-if="event.images" width="250" :src="event.images[0].url" />
     </n-gi>
     <n-gi :span="9">
       <div>
-        <span class="event-name">Name:</span>
-        <br />
         <event-name :event="event"></event-name>
       </div>
       <div>
-        <span class="event-date">Date:</span>
-        <br />
-        <event-date :event="event"></event-date>
+        <event-date :date="event.date"></event-date>
       </div>
       <div>
-        <span class="event-wtime">Time:</span>
-        <br />
-        <event-time :event="event"></event-time>
+        <vue-feather type="clock" size="15" />
+        {{ event.time }}
       </div>
       <div>
-        <span class="event-location">Location:</span>
-        <br />
-        <event-place :event="event"></event-place>
+        <event-place :place="event.place"></event-place>
       </div>
       <div>
-        <span class="event-price">Price:</span>
-        <br />
-        <event-price :event="event"></event-price>
+        <event-price :price="event.price"></event-price>
       </div>
       <div>
-        <span class="event-description">Description:</span>
-        <br />
         <event-description :event="event"></event-description>
       </div>
     </n-gi>
@@ -43,8 +33,7 @@ import EventDescription from '@/components/event/details/Description'
 import EventName from '@/components/event/details/Name'
 import EventPlace from '@/components/event/details/Place'
 import EventPrice from '@/components/event/details/Price'
-import EventTime from '@/components/event/details/Time'
-import EventImage from '@/components/event/Image'
+import EventTopBar from '@/components/event/TopBar'
 import { useEventStore } from '../store/event.store'
 
 export default {
@@ -55,8 +44,7 @@ export default {
     EventDescription,
     EventPlace,
     EventPrice,
-    EventTime,
-    EventImage
+    EventTopBar
   },
   data () {
     return {

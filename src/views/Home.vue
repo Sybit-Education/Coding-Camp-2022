@@ -3,16 +3,6 @@
     <Filter @filter="eventList = $event" />
   <event-list v-if="eventList.length" :list="eventList" />
   <n-alert v-else title="Keine Angebote gefunden!" type="warning" />
-  <button
-    @click="
-      this.$router.push({
-        name: 'EventDetails',
-        params: { id: 'reczK8kt8xZlAW62b' }
-      })
-    "
-  >
-    test
-  </button>
 </template>
 
 <script>
