@@ -18,6 +18,11 @@ const routes = [
     path: '/datenschutz',
     name: 'Datenschutz',
     component: Datenschutz
+  },
+  {
+    path: '/ueber-uns',
+    name: 'Über uns',
+    component: 'Über uns'
   }
 ]
 
