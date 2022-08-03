@@ -7,7 +7,7 @@
       <category-filter @update="filter.categories = $event; filterEvents()" />
     </div>
     <div :style="`margin: 0 0 10px 0; display: ${toggle ? '' : 'none'}`">
-    <age-range-filter @update="filter.dateRange = $event; filterEvents()"/>
+    <age-range-filter @update="filter.ageRange = $event; filterEvents()"/>
     </div>
 </template>
 
@@ -39,6 +39,9 @@ export default {
       const list = this.filterByCategory(this.filterByAge(this.eventList))
       this.$emit('filter', list)
     },
+    filterValues (min, max, value) {
+      return value >= min && value <= max
+    },
     filterByCategory (events) {
       if (this.filter.categories && this.filter.categories.length !== 0) {
         const list = []
@@ -59,7 +62,6 @@ export default {
       }
     },
     filterByAge: function (events) {
-      console.log('filterAge')
       const range = this.filter.ageRange
       if (range?.length === 2) {
         if (range[0] > range[1]) {
