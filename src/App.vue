@@ -1,12 +1,6 @@
 <template>
   <n-config-provider :theme-overrides="customTheme">
     <div id="app">
-      <n-spin :show="loading">
-        <router-view/>
-      </n-spin>
-    </div>
-  </n-config-provider>
-  <div id="app">
     <n-spin :show="loading">
       <router-view />
       <div id="buttons">
@@ -15,6 +9,7 @@
       </div>
     </n-spin>
   </div>
+  </n-config-provider>
 </template>
 
 <script>
