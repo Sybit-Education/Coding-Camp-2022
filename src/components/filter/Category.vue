@@ -1,5 +1,5 @@
 <template>
-    <n-select v-model:value="selects" multiple :options="categories" :consistent-menu-width="false" @update:value="update($event)" />
+    <n-select placeholder="Kategorie auswählen.." v-model:value="selects" multiple :options="categories" :consistent-menu-width="false" @update:value="update($event)" />
 </template>
 
 <script>
