@@ -6,7 +6,7 @@
     </n-gi>
     <n-gi :span="9">
       <div>
-        <event-name :event="event"></event-name>
+        <h2><event-name :event="event"></event-name></h2>
       </div>
       <div>
         <event-date :date="event.date"></event-date>
