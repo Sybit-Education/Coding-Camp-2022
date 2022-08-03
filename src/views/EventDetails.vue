@@ -11,9 +11,6 @@
       <div>
         <event-date :date="event.date"></event-date>
       </div>
-       <div>
-        <event-date :date="event.date"></event-date>
-      </div>
       <div>
         <vue-feather type="clock" size="15" />
         {{ event.time }}
