@@ -1,26 +1,47 @@
 <template>
   <n-space justify="center">
-  <n-card :title="item.name" >
-    <template #cover>
-      <div class="container">
-        <event-image :item="item"/>
-        <favourite-button :event="item" class="btn"/>
-      </div>
-    </template>
-  </n-card>
+    <n-card>
+      <template #header @click="this.$router.push({name: 'EventDetails', params: { id: item.id }})">
+        <h3>{{ item.name }}</h3>
+      </template>
+      <template #cover>
+        <div class="container">
+          <event-image :item="item" @click="this.$router.push({name: 'EventDetails', params: { id: item.id }})"/>
+          <favourite-button :event="item" class="btn"/>
+        </div>
+      </template>
+      <n-grid cols="1 m:3" @click="this.$router.push({name: 'EventDetails', params: { id: item.id }})">
+        <n-gi>
+          <event-place :place="item.place" />
+        </n-gi>
+        <n-gi>
+          <event-date :date="item.date" />
+        </n-gi>
+        <n-gi>
+          <event-time :time="item.time" />
+        </n-gi>
+        <n-gi>
+          <event-price :price="item.price" />
+        </n-gi>
+      </n-grid>
+    </n-card>
   </n-space>
 </template>
 
-<style scoped>
+<style>
+.n-card > .n-card-header {
+  padding: 0 0 0 25px !important;
+}
 .n-card {
-  width: 230px;
-  height: 250px;
+  cursor: pointer;
+  width: 350px;
+  height: 400px;
 }
 
 @media only screen and (max-width: 600px) {
 .n-card {
-  width: 325px;
-  height: 350px;
+  width: 395px;
+  height: 495px;
 }
 }
 .container {
@@ -51,12 +72,21 @@
 </style>
 
 <script>
+import EventDate from '@/components/event/details/Date.vue'
+import EventPlace from '@/components/event/details/Place.vue'
+import EventPrice from '@/components/event/details/Price.vue'
+import EventTime from '@/components/event/details/Time.vue'
 import EventImage from './Image.vue'
 import FavouriteButton from '@/components/favourite/FavouriteButton.vue'
 export default {
   name: 'EventCard',
   components: {
-    EventImage, FavouriteButton
+    EventImage,
+    EventPlace,
+    EventDate,
+    EventTime,
+    EventPrice,
+    FavouriteButton
   },
   props: {
     item: {
