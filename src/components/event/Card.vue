@@ -65,10 +65,6 @@
   cursor: pointer;
   text-align: center;
 }
-
-.container .btn:hover {
-  background-color: black;
-}
 </style>
 
 <script>
