@@ -1,16 +1,21 @@
 <template>
-  <search @search="eventList = $event" />
-    <Filter @filter="eventList = $event" />
-  <n-grid :x-gap="10" cols="3 s:4 m:5 l:6 xl:7 2xl:8" responsive="screen">
-    <n-gi :span="2">
+<div style="text-align:center">
+  <img src="https://www.radolfzell.de/bausteine.net/i/32274/Slider_LolliPop_Logo.jpg?width=400&hash=-1862807782" alt="LolliPop" style="margin: 10px; width: 80px; height: 50px;"/>
+  <img src="https://www.unser-ferienprogramm.de/logo/radolfzell1.jpg" style="margin: 10px; width: 80px; height: 40px;"/>
+  <img src="https://werbezentrum-bodensee.de/wp-content/uploads/2016/12/radolfzell.png" style="margin: 10px; width: 80px; height: 60px;"/>
+</div>
+
+  <n-grid :x-gap="10" cols="12">
+    <n-gi :span="10">
       <search @search="eventList = $event" />
     </n-gi>
-    <n-gi :span="1">
-      <n-button @click="this.$router.push({name:'Favoriten'})">
-        <vue-feather type="star"/>
+    <n-gi :span="2">
+      <n-button @click="this.$router.push({name:'Favoriten'})" size="medium" style="margin-top: 15px">
+        <vue-feather stroke="black" fill="#f0a020" size="30" type="star" />
       </n-button>
     </n-gi>
   </n-grid>
+  <Filter @filter="eventList = $event" />
   <event-list v-if="eventList.length" :list="eventList" />
   <n-alert v-else title="Keine Angebote gefunden!" type="warning" />
 </template>
@@ -38,5 +43,3 @@ export default {
   }
 }
 </script>
-
-<style scoped></style>

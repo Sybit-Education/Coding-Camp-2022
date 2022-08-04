@@ -1,5 +1,5 @@
 <template>
-    <n-button @click="this.$router.push({name:'Home'})">
+    <n-button @click="this.$router.push({name:'Home'})" style="margin: 10px 0">
     <vue-feather type="arrow-left"/>
     </n-button>
   <favourite-list v-if="favouriteList.length" :list="favouriteList" />

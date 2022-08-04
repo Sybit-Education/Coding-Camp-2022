@@ -39,10 +39,10 @@
 }
 
 @media only screen and (max-width: 600px) {
-.n-card {
-  width: 395px;
-  height: 495px;
-}
+  .n-card {
+    width: 380px;
+    height: 495px;
+  }
 }
 .container {
   position: relative;
@@ -64,10 +64,6 @@
   font-size: 16px;
   cursor: pointer;
   text-align: center;
-}
-
-.container .btn:hover {
-  background-color: black;
 }
 </style>
 

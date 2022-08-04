@@ -1,15 +1,10 @@
 <template>
-<n-button strong circle>
-      <template #icon>
-        <n-icon @click="toggleFavourite()" :color="isFavourite ? 'yellow' : 'black'">
-            <vue-feather type="star"/>
-        </n-icon>
-      </template>
-    </n-button>
+  <vue-feather @click="toggleFavourite()" class="star" type="star" size="40" :fill="isFavourite ? '#f0a020' : 'white'"/>
 </template>
 
 <script>
 import { useFavoriteStore } from '@/store/favorite.store'
+
 export default {
   name: 'FavouriteButton',
   methods: {
@@ -36,3 +31,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.star:hover {
+  color: #f0a020;
+}
+</style>

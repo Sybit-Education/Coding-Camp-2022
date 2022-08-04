@@ -1,4 +1,8 @@
 <template>
+    <span class="title">
+      <vue-feather type="folder" size="15px" class="icon" />
+      Kategorie
+    </span>
     <n-select placeholder="Kategorie auswählen.." v-model:value="selects" multiple :options="categories" :consistent-menu-width="false" @update:value="update($event)" />
 </template>
 
@@ -6,6 +10,7 @@
 import { useCategoryStore } from '../../store/category.store'
 export default {
   name: 'CategoryFilter',
+  emits: ['update'],
   data () {
     return {
       categories: [],
@@ -31,7 +36,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>
