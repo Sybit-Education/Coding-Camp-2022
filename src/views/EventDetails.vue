@@ -17,7 +17,7 @@
       </div>
       <div>
         <event-time :time="event.time" class="schriftgroese"></event-time>
-        <event-age :event="event"></event-age>
+        <event-age :event="event" class="schriftgroese"></event-age>
       </div>
       <div>
         <vue-feather type="clock" size="15" />
@@ -57,7 +57,7 @@ export default {
     EventPrice,
     EventTopBar,
     WeiterfuehrenderLink,
-    EventTime
+    EventTime,
     EventAge
   },
   data () {
