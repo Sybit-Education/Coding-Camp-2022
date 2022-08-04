@@ -17,6 +17,7 @@
       </div>
       <div>
         <event-time :time="event.time" class="schriftgroese"></event-time>
+        <event-age :event="event" class="schriftgroese"></event-age>
       </div>
       <div>
         <event-place :place="event.place" class="schriftgroese"></event-place>
@@ -40,6 +41,7 @@ import EventPrice from '@/components/event/details/Price'
 import EventTopBar from '@/components/event/TopBar'
 import EventTime from '@/components/event/details/Time.vue'
 import { useEventStore } from '../store/event.store'
+import EventAge from '@/components/event/details/Age.vue'
 
 export default {
   name: 'EventDetails',
@@ -51,7 +53,8 @@ export default {
     EventPrice,
     EventTopBar,
     WeiterfuehrenderLink,
-    EventTime
+    EventTime,
+    EventAge
   },
   data () {
     return {
