@@ -10,7 +10,7 @@
         size="medium"
         style="margin-top: 15px"
       >
-        <n-badge :value="favoriteListSize" :max="15">
+        <n-badge :value="favouriteListSize" :max="15">
           <vue-feather stroke="black" fill="#f0a020" size="30" type="star" />
         </n-badge>
       </n-button>
@@ -40,7 +40,10 @@ export default {
   },
   created () {
     const favoriteStore = useFavoriteStore()
-    this.favoriteListSize = favoriteStore.getFavoriteList.length
+    this.favouriteListSize = favoriteStore.getFavoriteList.length
+    favoriteStore.$subscribe((state) => {
+      this.favouriteListSize = state.events.target.length
+    })
     const eventStore = useEventStore()
     eventStore.fetchEventRecords().then((list) => {
       this.eventList = list
