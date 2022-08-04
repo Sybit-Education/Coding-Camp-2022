@@ -23,7 +23,7 @@
             <br>
             E-Mail: info@cafe-connect-rz.de
             <template #footer>
-            https://www.cafe-connect-rz.de/kontakt/
+            <a href="https://www.cafe-connect-rz.de/kontakt/" target="_self">https://www.cafe-connect-rz.de/kontakt/</a>
             </template>
           </n-card>
         </n-modal>
