@@ -72,6 +72,13 @@ export default {
   margin-top: 20px;
   margin-bottom: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+  #buttons .n-button__content {
+    font-size: 17px;
+  }
+}
+
 #paddingModal{
   margin-right: 20px;
   margin-top: 20px;
