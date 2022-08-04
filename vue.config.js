@@ -7,7 +7,7 @@ module.exports = {
     appleMobileWebAppCapable: 'yes',
     appleMobileWebAppStatusBarStyle: 'black',
     workboxPluginMode: 'InjectManifest',
-      workboxOptions: {
+    workboxOptions: {
       swSrc: 'src/registerServiceWorker.js'
     },
     manifestOptions: {
