@@ -27,7 +27,10 @@ export default {
     if (favList && favList.length > 0) {
       const eventStore = useEventStore()
       for (let i = 0; i < favList.length; i++) {
-        list.push(eventStore.getEventById(favList[i]))
+        const e = eventStore.getEventById(favList[i])
+        if (e?.id) {
+          list.push(e)
+        }
       }
       this.favouriteList = list
     }
