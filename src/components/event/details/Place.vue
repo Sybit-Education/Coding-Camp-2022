@@ -1,7 +1,8 @@
 <template>
 <div>
-    <vue-feather type="map-pin" size="17" />
+ <span> <vue-feather type="map-pin" size="17" />
     {{ this.place }}
+  </span>
 </div>
 </template>
 
