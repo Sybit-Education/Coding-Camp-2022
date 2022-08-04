@@ -83,7 +83,13 @@ export default {
           range[1] = range[0]
           range[0] = temp
         }
-        return events.filter(event => (this.filterValues(event.price, range[0], range[1])) ? event : '')
+        return events.filter(event => {
+          if (!event.price || event.price === 0) {
+            return event
+          } else {
+            return this.filterValues(event.price, range[0], range[1]) ? event : ''
+          }
+        })
       } else {
         return (events)
       }
