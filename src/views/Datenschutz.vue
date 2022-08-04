@@ -1,6 +1,7 @@
 <!-- eslint-disable no-irregular-whitespace -->
 <!-- eslint-disable no-tabs -->
 <template>
+<p></p>
  <back-btn/>
 <div>
     <h1>DATENSCHUTZ</h1>

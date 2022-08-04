@@ -1,4 +1,5 @@
 <template>
+<p></p>
  <back-btn-vue/>
 <h1> ÜBER UNS </h1>
    <h2>Sybit Coding-Camp</h2>
