@@ -27,6 +27,11 @@ export default {
 </script>
 
 <style>
+
+a{
+   dorder: solid 10px red;
+}
+
 .gruppenbild{
     text-align: center;
     width: 90%;
