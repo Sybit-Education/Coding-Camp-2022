@@ -3,10 +3,14 @@
   <n-grid cols="1 m:12 l:12" responsive="screen" v-if="event && event.id">
     <n-gi :span="3">
       <n-image v-if="event.images" width="250" :src="event.images[0].url" />
+      <n-skeleton v-else height="250px" width="100%" />
     </n-gi>
     <n-gi :span="9">
       <div>
         <h2><event-name :event="event"></event-name></h2>
+      </div>
+      <div>
+        <weiterfuehrender-link :event="event"/>
       </div>
       <div>
         <event-date :date="event.date"></event-date>
@@ -28,6 +32,7 @@
   </n-grid>
 </template>
 <script>
+import WeiterfuehrenderLink from '@/components/event/details/WeiterführenderLink'
 import EventDate from '@/components/event/details/Date'
 import EventDescription from '@/components/event/details/Description'
 import EventName from '@/components/event/details/Name'
@@ -44,7 +49,8 @@ export default {
     EventDescription,
     EventPlace,
     EventPrice,
-    EventTopBar
+    EventTopBar,
+    WeiterfuehrenderLink
   },
   data () {
     return {
