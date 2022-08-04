@@ -1,11 +1,11 @@
 <template>
     <span class="event-title" v-if="event.description">
-      <markdown-wrapper :source="event.description"/>
+      <markdown :source="event.description"/>
     </span>
 </template>
 
 <script>
-import MarkdownWrapper from '@/components/MarkdownWrapper.vue'
+import Markdown from 'vue3-markdown-it'
 
 export default {
   name: 'EventDescription',
@@ -15,7 +15,7 @@ export default {
     }
   },
   components: {
-    MarkdownWrapper
+    Markdown
   }
 }
 </script>
