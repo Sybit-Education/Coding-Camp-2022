@@ -11,7 +11,7 @@
          <n-modal v-model:show="showContact">
           <n-card style="width: 600px" title="Café connect" :bordered="false" size="huge" role="dialog" aria-modal="true">
             <template #header-extra>
-              <div id="paddingModal">
+            <div id="paddingModal">
             Bahnhofstr. 2
             <br>
             78315 Radolfzell am Bodensee
@@ -23,7 +23,7 @@
             <br>
             E-Mail: info@cafe-connect-rz.de
             <template #footer>
-            <a href="https://www.cafe-connect-rz.de/kontakt/" target="_self">https://www.cafe-connect-rz.de/kontakt/</a>
+            <a href="https://www.cafe-connect-rz.de/kontakt/" target="_blank">https://www.cafe-connect-rz.de/kontakt/</a>
             </template>
           </n-card>
         </n-modal>
