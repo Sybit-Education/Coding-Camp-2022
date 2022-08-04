@@ -1,6 +1,8 @@
 <template>
-<vue-feather type="tag" size="15" />
+<div>
+<vue-feather type="tag" size="17" />
     {{ this.price }}€
+</div>
 </template>
 
 <script>
