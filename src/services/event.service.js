@@ -6,7 +6,11 @@ export const eventService = {
       const allEvents = []
       api('Event')
         .select({
-          view: 'future_events'
+          view: 'future_events',
+          sort: [{
+            field: 'date',
+            direction: 'asc'
+          }]
         })
         .eachPage(
           function page (records, fetchNextPage) {
