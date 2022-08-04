@@ -62,7 +62,6 @@ export default {
     const eventStore = useEventStore()
     await eventStore.fetchEventRecords()
     this.event = await eventStore.getEventById(this.eventId)
-    console.log(this.event)
   }
 }
 </script>
