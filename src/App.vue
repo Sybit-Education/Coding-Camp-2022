@@ -66,11 +66,9 @@ export default {
   padding: 0 7px 0 7px;
 }
 #buttons{
-  display: flex;
-  justify-content: space-around;
-  bottom: 0;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  position: fixed;
+  bottom: 0%;
+  left: 7%;
 }
 #paddingModal{
   margin-right: 20px;
