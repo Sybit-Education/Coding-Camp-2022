@@ -3,11 +3,17 @@
         <vue-feather type="filter"/>
         Filter
     </n-button>
-    <div :style="`margin: 0 0 10px 0; display: ${toggle ? '' : 'none'}`">
-      <category-filter @update="filter.categories = $event; filterEvents()" />
-      <price-filter @update="filter.price = $event; filterEvents()"/>
-      <age-range-filter @update="filter.ageRange = $event; filterEvents()"/>
-    </div>
+    <n-grid :style="`margin: 0 0 10px 0; display: ${toggle ? '' : 'none'}`" cols="12" responsive="screen">
+      <n-gi :span="12">
+        <category-filter @update="filter.categories = $event; filterEvents()" />
+      </n-gi>
+      <n-gi :span="6">
+        <age-range-filter @update="filter.ageRange = $event; filterEvents()"/>
+      </n-gi>
+      <n-gi :span="6">
+        <price-filter @update="filter.price = $event; filterEvents()"/>
+      </n-gi>
+    </n-grid>
 </template>
 
 <script>
@@ -92,7 +98,3 @@ export default {
 }
 
 </script>
-
- <style>
-
- </style>
