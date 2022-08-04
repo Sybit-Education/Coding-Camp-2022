@@ -20,10 +20,6 @@
         <event-age :event="event" class="schriftgroese"></event-age>
       </div>
       <div>
-        <vue-feather type="clock" size="15" />
-        {{ event.time }}
-      </div>
-      <div>
         <event-place :place="event.place" class="schriftgroese"></event-place>
       </div>
       <div>
