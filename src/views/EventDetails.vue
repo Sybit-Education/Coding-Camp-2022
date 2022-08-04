@@ -41,10 +41,6 @@ import EventPrice from '@/components/event/details/Price'
 import EventTopBar from '@/components/event/TopBar'
 import { useEventStore } from '../store/event.store'
 
-if (EventPrice === null) {
-  EventPrice = 0
-}
-
 export default {
   name: 'EventDetails',
   components: {
@@ -66,7 +62,6 @@ export default {
     const eventStore = useEventStore()
     await eventStore.fetchEventRecords()
     this.event = await eventStore.getEventById(this.eventId)
-    console.log(this.event)
   }
 }
 </script>
