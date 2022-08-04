@@ -1,6 +1,7 @@
 <template>
-<vue-feather type="tag" size="15" />
-    {{ this.price }}€
+  <vue-feather type="tag" size="17" />
+  <span v-if="price">{{ this.price }}€</span>
+  <span v-else style="color: #18a058; font-weight: bold">Gratis</span>
 </template>
 
 <script>

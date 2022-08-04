@@ -1,11 +1,15 @@
 <template>
-<h3 style="padding-left: 5px"> <vue-feather type="tag" size="15px"/> Preis </h3>
-  <n-slider v-model:value="range" range :step="1" style="margin: 10px 0 10px 0" @update:value="update($event)" />
+  <span class="title">
+    <vue-feather type="tag" size="15px" class="icon" />
+    Preis
+  </span>
+  <n-slider v-model:value="range" range :step="1" @update:value="update($event)" />
 </template>
 
 <script>
 export default {
   name: 'PriceFilter',
+  emits: ['update'],
   data () {
     return {
       range: [0, 999]
@@ -18,9 +22,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.icons {
-    align-items: center;
-}
-</style>

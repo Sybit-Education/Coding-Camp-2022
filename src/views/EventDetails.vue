@@ -10,12 +10,13 @@
         <h2><event-name :event="event"></event-name></h2>
       </div>
       <div>
-        <weiterfuehrender-link :event="event"/>
+        <weiterfuehrender-link :event="event" class="schriftgroese"/>
       </div>
       <div>
-        <event-date :date="event.date"></event-date>
+        <event-date :date="event.date" class="schriftgroese"></event-date>
       </div>
       <div>
+        <event-time :time="event.time" class="schriftgroese"></event-time>
         <event-age :event="event"></event-age>
       </div>
       <div>
@@ -23,13 +24,13 @@
         {{ event.time }}
       </div>
       <div>
-        <event-place :place="event.place"></event-place>
+        <event-place :place="event.place" class="schriftgroese"></event-place>
       </div>
       <div>
-        <event-price :price="event.price"></event-price>
+        <event-price :price="event.price" class="schriftgroese"></event-price>
       </div>
       <div>
-        <event-description :event="event"></event-description>
+        <event-description :event="event" class="schriftgroese"></event-description>
       </div>
     </n-gi>
   </n-grid>
@@ -42,6 +43,7 @@ import EventName from '@/components/event/details/Name'
 import EventPlace from '@/components/event/details/Place'
 import EventPrice from '@/components/event/details/Price'
 import EventTopBar from '@/components/event/TopBar'
+import EventTime from '@/components/event/details/Time.vue'
 import { useEventStore } from '../store/event.store'
 import EventAge from '@/components/event/details/Age.vue'
 
@@ -55,6 +57,7 @@ export default {
     EventPrice,
     EventTopBar,
     WeiterfuehrenderLink,
+    EventTime
     EventAge
   },
   data () {
@@ -103,5 +106,8 @@ h2 {
   font-weight: bold;
   font-size: x-large;
   padding: 0;
+}
+.schriftgroese {
+  font-size: 17px;
 }
 </style>
