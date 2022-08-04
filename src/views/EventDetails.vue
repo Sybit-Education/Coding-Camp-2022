@@ -16,6 +16,9 @@
         <event-date :date="event.date"></event-date>
       </div>
       <div>
+        <event-age :event="event"></event-age>
+      </div>
+      <div>
         <vue-feather type="clock" size="15" />
         {{ event.time }}
       </div>
@@ -40,6 +43,7 @@ import EventPlace from '@/components/event/details/Place'
 import EventPrice from '@/components/event/details/Price'
 import EventTopBar from '@/components/event/TopBar'
 import { useEventStore } from '../store/event.store'
+import EventAge from '@/components/event/details/Age.vue'
 
 export default {
   name: 'EventDetails',
@@ -50,7 +54,8 @@ export default {
     EventPlace,
     EventPrice,
     EventTopBar,
-    WeiterfuehrenderLink
+    WeiterfuehrenderLink,
+    EventAge
   },
   data () {
     return {
