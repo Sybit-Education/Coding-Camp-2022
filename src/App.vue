@@ -66,9 +66,11 @@ export default {
   padding: 0 7px 0 7px;
 }
 #buttons{
-  position: fixed;
-  bottom: 0%;
-  left: 7%;
+  display: flex;
+  justify-content: space-around;
+  bottom: 0;
+  margin-top: 215px;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 600px) {
