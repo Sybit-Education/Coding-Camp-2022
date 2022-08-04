@@ -33,10 +33,12 @@ export default {
     margin-left: auto;
     margin-right: auto;
 }
+
 #bildunterschrift{
    text-align: center;
    font-size: 75%;
 }
+
 h1{
    text-align: center;
    color: grey  ;
