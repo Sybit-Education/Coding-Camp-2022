@@ -3,17 +3,20 @@
         <vue-feather type="filter"/>
         Filter
     </n-button>
-    <n-grid :style="`margin: 0 0 10px 0; display: ${toggle ? '' : 'none'}`" cols="12" responsive="screen">
-      <n-gi :span="12">
+  <div :style="`margin: 0 0 10px 0; display: ${toggle ? '' : 'none'}`">
+    <n-grid cols="12" responsive="screen" :x-gap="10" class="filter">
+      <n-gi :span="12" class="category">
         <category-filter @update="filter.categories = $event; filterEvents()" />
       </n-gi>
-      <n-gi :span="6">
+      <n-gi :span="6" class="age">
         <age-range-filter @update="filter.ageRange = $event; filterEvents()"/>
       </n-gi>
-      <n-gi :span="6">
+      <n-gi :span="6" class="price">
         <price-filter @update="filter.price = $event; filterEvents()"/>
       </n-gi>
     </n-grid>
+  </div>
+
 </template>
 
 <script>
@@ -24,6 +27,7 @@ import PriceFilter from './Price.vue'
 export default {
   components: { CategoryFilter, AgeRangeFilter, PriceFilter },
   name: 'Filter',
+  emits: ['filter'],
   data () {
     return {
       toggle: false,
@@ -98,3 +102,19 @@ export default {
 }
 
 </script>
+
+<style>
+.filter .age,
+.filter .category,
+.filter .price {
+  margin: 0 0 10px 0 !important;
+}
+.filter .icons {
+  align-items: center;
+}
+.filter .title {
+  font-weight: bold;
+  padding-left: 5px;
+  font-size: 17px;
+}
+</style>

@@ -1,9 +1,9 @@
 <template>
   <n-grid :x-gap="10" cols="12">
-    <n-gi :span="11">
+    <n-gi :span="10">
       <search @search="eventList = $event" />
     </n-gi>
-    <n-gi :span="1" align="right">
+    <n-gi :span="2">
       <n-button @click="this.$router.push({name:'Favoriten'})" size="medium" style="margin-top: 15px">
         <vue-feather stroke="black" fill="#f0a020" size="30" type="star" />
       </n-button>
