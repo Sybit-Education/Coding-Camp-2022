@@ -1,5 +1,8 @@
 <template>
-    <h3 style="padding-left: 5px"> <vue-feather type="user" size="15px"/> Alter </h3>
+    <span class="title">
+      <vue-feather type="user" size="15px" class="icon" />
+      Alter
+    </span>
   <n-slider v-model:value="range" range :step="1" :max="18" :min="1" @update:value="update($event)"/>
 </template>
 <script>
@@ -18,9 +21,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.icons {
-    align-items: center;
-}
-</style>
