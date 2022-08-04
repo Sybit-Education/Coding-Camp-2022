@@ -6,7 +6,7 @@
    <h2>Was haben wir denn während des Coding-Camps gemacht?</h2>
    Während des Coding-Camps haben wir eine Web-App für das Radolfzeller Ferienprogramm gecodet. Wir sind insgesamt zehn Schüler und sechs Auszubildende gewesen. Die Auszubildenden haben uns vieles über das Programmieren mit Vue, JavaScript, HTML und CSS beigebracht. Wir haben uns in fünf Gruppen aufgeteilt und an den zuvor besprochenen Aufgaben gearbeitet. Uns wurde erklärt, wie eine Firma wie Sybit arbeitet. Danach haben uns das Sybit-Team die Personas erklärt und vorgestellt. Gegen Ende unserer Vorbereitung haben wir vier Personas erstellt und jeweils User Storys für diese erstellt.
  <p></p>
- <a href="https://coding-camp.sybit.de/">Hier</a> gehts zur Website vom Sybit Coding-Camp.
+ <a href="https://coding-camp.sybit.de/" target="_blank">Hier</a> gehts zur Website vom Sybit Coding-Camp.
  <p></p>
  <p></p>
  <div class="gruppenbild">
