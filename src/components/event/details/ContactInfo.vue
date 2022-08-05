@@ -75,5 +75,6 @@ export default defineComponent({
 .anmeldung {
   color: darkblue;
   font-size: 17px;
+  cursor: pointer;
 }
 </style>
