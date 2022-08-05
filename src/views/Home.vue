@@ -11,7 +11,7 @@
         style="margin-top: 15px"
       >
         <n-badge :value="favouriteListSize" :max="15">
-          <vue-feather stroke="black" fill="#f0a020" size="30" type="star" />
+          <vue-feather stroke="black" fill="#ffd200" size="30" type="star" />
         </n-badge>
       </n-button>
     </n-gi>

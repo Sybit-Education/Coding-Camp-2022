@@ -1,5 +1,7 @@
 <template>
-  <vue-feather @click="toggleFavourite()" class="star" type="star" size="40" :fill="isFavourite ? '#f0a020' : 'white'"/>
+<n-button strong secondary round class="star" @click="toggleFavourite()" style="background: transparent;">
+    <vue-feather type="star" size="20" :fill="isFavourite ? '#ffd200' : '#fff5cc'"/>
+</n-button>
 </template>
 
 <script>
@@ -33,7 +35,9 @@ export default {
 </script>
 
 <style scoped>
+.star{
+}
 .star:hover {
-  color: #f0a020;
+  color: #ffd200;
 }
 </style>
