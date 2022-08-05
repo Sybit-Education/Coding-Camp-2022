@@ -12,6 +12,7 @@
     "core-js": "^3.6.5",
     "dotenv": "^16.0.0",
     "feather-icons": "^4.29.0",
+    "ics": "^2.37.0",
     "pinia": "^2.0.14",
     "register-service-worker": "^1.7.2",
     "vue": "^3.0.0",

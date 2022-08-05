@@ -28,20 +28,22 @@
       <div>
         <event-description :event="event" class="schriftgroese"></event-description>
       </div>
+      <event-calendar :event="event" type="info" size="small" style="margin-top: 5px" />
     </n-gi>
   </n-grid>
 </template>
 <script>
-import WeiterfuehrenderLink from '@/components/event/details/WeiterführenderLink'
+import EventAge from '@/components/event/details/Age.vue'
+import EventCalendar from '@/components/event/details/Calendar.vue'
 import EventDate from '@/components/event/details/Date'
 import EventDescription from '@/components/event/details/Description'
 import EventName from '@/components/event/details/Name'
 import EventPlace from '@/components/event/details/Place'
 import EventPrice from '@/components/event/details/Price'
-import EventTopBar from '@/components/event/TopBar'
 import EventTime from '@/components/event/details/Time.vue'
+import WeiterfuehrenderLink from '@/components/event/details/WeiterführenderLink'
+import EventTopBar from '@/components/event/TopBar'
 import { useEventStore } from '../store/event.store'
-import EventAge from '@/components/event/details/Age.vue'
 
 export default {
   name: 'EventDetails',
@@ -54,7 +56,8 @@ export default {
     EventTopBar,
     WeiterfuehrenderLink,
     EventTime,
-    EventAge
+    EventAge,
+    EventCalendar
   },
   data () {
     return {
