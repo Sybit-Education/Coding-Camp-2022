@@ -21,7 +21,7 @@
           <event-time :time="item.time" />
         </n-gi>
         <n-gi>
-          <event-price :price="item.price" />
+          <event-price :price=" ' ' + item.price" />
         </n-gi>
       </n-grid>
     </n-card>
@@ -40,7 +40,7 @@
 
 @media only screen and (max-width: 600px) {
   .n-card {
-    width: 380px;
+    width: 365px;
     height: 495px;
   }
 }

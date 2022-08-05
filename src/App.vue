@@ -3,6 +3,11 @@
     <div id="app">
     <n-spin :show="loading">
       <router-view />
+        <div style="text-align:center">
+          <img src="https://www.radolfzell.de/bausteine.net/i/32274/Slider_LolliPop_Logo.jpg?width=400&hash=-1862807782" alt="LolliPop" style="margin: 10px; width: 80px; height: 50px;"/>
+          <img src="https://www.unser-ferienprogramm.de/logo/radolfzell1.jpg" style="margin: 10px; width: 80px; height: 40px;"/>
+          <img src="https://werbezentrum-bodensee.de/wp-content/uploads/2016/12/radolfzell.png" style="margin: 10px; width: 80px; height: 60px;"/>
+        </div>
       <div id="buttons">
         <n-button text @click="this.$router.push({name:'Impressum'})">Impressum</n-button>
         <n-button text @click="this.$router.push({name:'Datenschutz'})">Datenschutz</n-button>

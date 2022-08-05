@@ -42,7 +42,10 @@ const routes = [
 const router = createRouter({
   base: '/',
   history: createWebHistory(),
-  routes
+  routes,
+  scrollBehavior () {
+    document.getElementById('app').scrollIntoView({ behavior: 'auto' })
+  }
 })
 
 export default router

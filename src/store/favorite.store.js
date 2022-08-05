@@ -30,7 +30,6 @@ export const useFavoriteStore = defineStore('favorite', {
         const list = this.favoriteList
         list.splice(this.favoriteList.indexOf(event.id), 1)
         localStorage.setItem('favorites', list.toString())
-        console.log(this.favoriteList)
       }
     }
   }
