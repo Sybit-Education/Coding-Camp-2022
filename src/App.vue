@@ -74,7 +74,7 @@ export default {
   display: flex;
   justify-content: space-around;
   bottom: 0;
-  margin-top: 20px;
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 
