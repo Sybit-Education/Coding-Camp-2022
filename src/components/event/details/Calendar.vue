@@ -18,13 +18,10 @@ export default {
         start: [
           dateFormat.getFullYear(),
           dateFormat.getMonth(),
-          dateFormat.getDay(),
-          6,
-          30
+          dateFormat.getDay()
         ],
-        duration: { hours: 6, minutes: 30 },
         title: this.event.name,
-        description: this.event.description,
+        description: this.event.description + `\n Zeit: ${this.event.time}`,
         location: this.event.location,
         url: this.event.hostWebsite,
         status: 'CONFIRMED',
@@ -37,7 +34,7 @@ export default {
           console.log(error)
           return
         }
-        window.open('data:text/calendar;charset=utf8,' + value)
+        window.open('data:text/calendar;charset=utf8,' + encodeURIComponent(value))
       })
     }
   }
