@@ -14,7 +14,7 @@
     <img src="../../public/img/pictures/group.png" class="gruppenbild"/>
 </div>
 <div id="bildunterschrift">
-   Text unterm Bild (Platzhalter)
+   Coding Camp 2022
 </div>
 </template>
 
