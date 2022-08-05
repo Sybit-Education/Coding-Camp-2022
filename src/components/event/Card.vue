@@ -21,7 +21,7 @@
           <event-time :time="item.time" />
         </n-gi>
         <n-gi>
-          <event-price :price=" ' ' + item.price" />
+          <event-price :price="item.price" />
         </n-gi>
       </n-grid>
     </n-card>
