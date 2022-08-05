@@ -1,5 +1,5 @@
 <template>
-  <vue-feather @click="toggleFavourite()" class="star" type="star" size="40" :fill="isFavourite ? '#f0a020' : 'white'"/>
+  <vue-feather @click="toggleFavourite()" class="star" type="star" size="30" :fill="isFavourite ? '#f0a020' : 'white'"/>
 </template>
 
 <script>
