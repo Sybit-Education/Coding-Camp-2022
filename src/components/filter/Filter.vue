@@ -48,7 +48,10 @@ export default {
   methods: {
     filterEvents () {
       const list = this.filterByCategory(this.filterByPrice(this.filterByAge(this.eventList)))
-      this.$emit('filter', list)
+      this.$emit('filter', {
+        list,
+        filter: this.filter
+      })
     },
     filterValues (x, min, max) {
       return x >= min && x <= max

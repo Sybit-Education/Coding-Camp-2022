@@ -2,7 +2,7 @@
   <h2 style="text-align: center">Ferienprogramm Radolfzell</h2>
   <n-grid :x-gap="10" cols="12">
     <n-gi :span="10">
-      <search @search="eventList = $event" />
+      <search @search="searchResults = $event; createResultList()" />
     </n-gi>
     <n-gi :span="2">
       <n-button
@@ -16,8 +16,8 @@
       </n-button>
     </n-gi>
   </n-grid>
-  <Filter @filter="eventList = $event" />
-  <event-list v-if="eventList.length" :list="eventList" />
+  <Filter @filter="filterResults = $event.list; createResultList($event.filter)" />
+  <event-list v-if="resultList.length" :list="resultList" />
   <n-alert v-else title="Keine Angebote gefunden!" type="warning" />
 </template>
 
@@ -32,8 +32,10 @@ export default {
   components: { EventList, Search, Filter },
   data () {
     return {
-      // TODO: Data from Airtable
       eventList: [],
+      filterResults: [],
+      searchResults: [],
+      resultList: [],
       searchInput: '',
       favouriteListSize: 0
     }
@@ -47,7 +49,37 @@ export default {
     const eventStore = useEventStore()
     eventStore.fetchEventRecords().then((list) => {
       this.eventList = list
+      this.resultList = list
     })
+  },
+  methods: {
+    createResultList (filter) {
+      let useFilter = false
+      if (filter) {
+        if (filter.ageRange?.length || filter.price?.length || filter.categories?.length) {
+          useFilter = true
+        }
+      }
+      console.log(useFilter)
+      if (this.searchResults.length && this.filterResults.length && useFilter) {
+        const results = []
+        console.log('search + filter')
+        this.searchResults.forEach(searchResult => {
+          if (this.filterResults.includes(searchResult)) {
+            results.push(searchResult)
+          }
+        })
+        this.resultList = results
+      } else if (this.filterResults.length) {
+        console.log('filter')
+        this.resultList = this.filterResults
+      } else if (this.searchResults.length) {
+        console.log('search')
+        this.resultList = this.searchResults
+      } else {
+        this.resultList = this.eventList
+      }
+    }
   }
 }
 </script>

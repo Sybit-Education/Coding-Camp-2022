@@ -59,7 +59,6 @@ export default defineComponent({
     this.hostAgency = await hostAgencyStore.fetchHostAgencyRecordsForEvent(
       this.event
     )
-    console.log(this.hostAgency)
   }
 })
 </script>
