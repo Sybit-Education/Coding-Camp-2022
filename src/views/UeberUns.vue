@@ -15,7 +15,8 @@
 </div>
 <div id="bildunterschrift">
    Coding Camp 2022: Stella Mangold, Lukas Frahm, Ben Fröhlich, Carlo Meßmer, Michael Simon, Richard Martz, Eric Zeller,
-   Jeudyl Robles, Eldar Mesic, Amar Mesic
+   Jeudyl Robles, Eldar Mesic, Amar Mesic, Lukas Moßbrugger, Jan Steppacher, Joris Schwetke, Raphael Schnick, Oliver Schönherr,
+  Mario Sieg, Stephan Strittmatter
 </div>
 </template>
 
