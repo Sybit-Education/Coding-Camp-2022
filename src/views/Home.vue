@@ -42,6 +42,8 @@ export default {
     const favoriteStore = useFavoriteStore()
     this.favouriteListSize = favoriteStore.getFavoriteList.length
     favoriteStore.$subscribe((state) => {
+      console.log(state)
+      console.log(state.events)
       this.favouriteListSize = state.events.target.length
     })
     const eventStore = useEventStore()
