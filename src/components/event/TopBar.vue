@@ -4,7 +4,7 @@
       <BackBtn/>
     </n-gi>
     <n-gi class="share">
-      <FavouriteButton event="item"/>
+      <FavouriteButton :event="event"/>
       <share-button :event="event"></share-button></n-gi>
   </n-grid>
 </template>
