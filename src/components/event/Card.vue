@@ -1,20 +1,16 @@
 <template>
   <n-space justify="center">
-    <n-card
-      @click="
-        this.$router.push({
-          name: 'EventDetails',
-          params: { id: item.id }
-        })
-      "
-    >
-      <template #header>
+    <n-card>
+      <template #header @click="this.$router.push({name: 'EventDetails', params: { id: item.id }})">
         <h3>{{ item.name }}</h3>
       </template>
       <template #cover>
-        <event-image :item="item" />
+        <div class="container">
+          <event-image :item="item" @click="this.$router.push({name: 'EventDetails', params: { id: item.id }})"/>
+          <favourite-button :event="item" class="btn"/>
+        </div>
       </template>
-      <n-grid cols="1 m:3">
+      <n-grid cols="1 m:3" @click="this.$router.push({name: 'EventDetails', params: { id: item.id }})">
         <n-gi>
           <event-place :place="item.place" />
         </n-gi>
@@ -43,10 +39,31 @@
 }
 
 @media only screen and (max-width: 600px) {
-.n-card {
-  width: 395px;
-  height: 495px;
+  .n-card {
+    width: 365px;
+    height: 495px;
+  }
 }
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 13%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
 }
 </style>
 
@@ -56,6 +73,7 @@ import EventPlace from '@/components/event/details/Place.vue'
 import EventPrice from '@/components/event/details/Price.vue'
 import EventTime from '@/components/event/details/Time.vue'
 import EventImage from './Image.vue'
+import FavouriteButton from '@/components/favourite/FavouriteButton.vue'
 export default {
   name: 'EventCard',
   components: {
@@ -63,7 +81,8 @@ export default {
     EventPlace,
     EventDate,
     EventTime,
-    EventPrice
+    EventPrice,
+    FavouriteButton
   },
   props: {
     item: {
