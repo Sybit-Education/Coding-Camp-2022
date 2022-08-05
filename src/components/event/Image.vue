@@ -1,6 +1,6 @@
 <template>
     <img v-if="img" :src="img" width="200px" />
-    <n-skeleton v-else height="450px" width="100%" />
+    <n-skeleton v-else height="260px" width="100%" />
 </template>
 
 <script>
