@@ -8,7 +8,6 @@
     <n-gi :span="9">
       <div>
         <h2><event-name :event="event"></event-name></h2>
-        <event-calendar :event="event"></event-calendar>
       </div>
       <div>
         <weiterfuehrender-link :event="event" class="schriftgroese"/>
@@ -29,6 +28,7 @@
       <div>
         <event-description :event="event" class="schriftgroese"></event-description>
       </div>
+      <event-calendar :event="event" type="info" size="small" style="margin-top: 5px" />
     </n-gi>
   </n-grid>
 </template>
