@@ -8,7 +8,7 @@ module.exports = {
     appleMobileWebAppStatusBarStyle: 'black',
     workboxPluginMode: 'InjectManifest',
     workboxOptions: {
-      swSrc: 'src/registerServiceWorker.js'
+      swSrc: 'public/registerServiceWorker.js'
     },
     manifestOptions: {
       // TODO: App Icons?
