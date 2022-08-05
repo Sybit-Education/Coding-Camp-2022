@@ -1,8 +1,8 @@
 <template>
-  <div>
-<vue-feather type="user" size="17"></vue-feather>
-<span v-if="event.minAge && !event.maxAge">{{event.minAge}} Jahre</span>
-<span v-else-if="event.minAge && event.maxAge">{{event.minAge}} - {{event.maxAge}} Jahre</span>
+  <div v-if="event.minAge || event.maxAge">
+     <vue-feather type="user" size="17" />
+     <span v-if="event.minAge && !event.maxAge">{{event.minAge}} Jahre</span>
+      <span v-else-if="event.minAge && event.maxAge">{{event.minAge}} - {{event.maxAge}} Jahre</span>
   </div>
 </template>
 <script>
