@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
-import './registerServiceWorker'
+import '../public/registerServiceWorker'
 import router from './router'
 import naive from 'naive-ui'
 import VueFeather from 'vue-feather'
