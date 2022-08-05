@@ -3,15 +3,18 @@
     <n-gi>
       <BackBtn/>
     </n-gi>
-    <n-gi class="share"><share-button :event="event"></share-button></n-gi>
+    <n-gi class="share">
+      <FavouriteButton :event="event"/>
+      <share-button :event="event"></share-button></n-gi>
   </n-grid>
 </template>
 <script>
 import ShareButton from '@/components/event/details/ShareButton'
 import BackBtn from './details/BackBtn.vue'
+import FavouriteButton from '@/components/favourite/FavouriteButton'
 export default {
   name: 'EventTopBar',
-  components: { BackBtn, ShareButton },
+  components: { BackBtn, ShareButton, FavouriteButton },
   props: {
     event: {
       type: Object,
