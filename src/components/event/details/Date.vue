@@ -1,6 +1,8 @@
 <template>
-    <vue-feather type="calendar" size="15" />
-    {{ formatDate(this.date) }}
+<div v-if="date">
+    <vue-feather type="calendar" size="17" />
+    {{ this.date }}
+</div>
 </template>
 
 <script>

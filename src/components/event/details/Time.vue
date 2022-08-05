@@ -1,6 +1,8 @@
 <template>
-<vue-feather type="clock" size="15" />
-    {{ this.time }} Uhr
+<div v-if="time">
+  <vue-feather type="clock" size="17" />
+  {{ this.time }} Uhr
+</div>
 </template>
 
 <script>

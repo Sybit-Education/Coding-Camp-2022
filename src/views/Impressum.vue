@@ -1,5 +1,7 @@
 <template>
-    <h2>Impressum</h2>
+  <p></p>
+  <back-btn/>
+    <h1>IMPRESSUM</h1>
 <p>Sybit GmbH<br />
 Sankt-Johannis-Straße 1 - 5<br />78315 Radolfzell</p>
 <p>Telefon: 07732 95080<br />
@@ -11,5 +13,13 @@ E-Mail: <a href="mailto:info@sybit.de">info@sybit.de</a><br />
 <strong>Aufsichtsbehörde: </strong>Bundesbeaufragter für den Datenschutz und die Informationsfreiheit<br />
 <br /><h2>Hinweis gem&auml;&szlig; Verbraucherstreitbeilegungsgesetz (VSBG)</h2>
 <p>Wir sind nicht bereit und verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
-<p>Quelle: <a href="https://www.juraforum.de/impressum-generator/">Weiter</a></p>
+
 </template>
+
+<script>
+import BackBtn from '@/components/event/details/BackBtn.vue'
+
+export default {
+  components: { BackBtn }
+}
+</script>
