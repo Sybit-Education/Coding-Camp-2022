@@ -13,6 +13,9 @@
         <weiterfuehrender-link :event="event" class="schriftgroese"/>
       </div>
       <div>
+        <contact-info :event="event"/>
+      </div>
+      <div>
         <event-date :date="event.date" class="schriftgroese"></event-date>
       </div>
       <div>
@@ -39,6 +42,7 @@ import EventName from '@/components/event/details/Name'
 import EventPlace from '@/components/event/details/Place'
 import EventPrice from '@/components/event/details/Price'
 import EventTopBar from '@/components/event/TopBar'
+import ContactInfo from '@/components/event/details/ContactInfo'
 import EventTime from '@/components/event/details/Time.vue'
 import { useEventStore } from '../store/event.store'
 import EventAge from '@/components/event/details/Age.vue'
@@ -52,6 +56,7 @@ export default {
     EventPlace,
     EventPrice,
     EventTopBar,
+    ContactInfo,
     WeiterfuehrenderLink,
     EventTime,
     EventAge
