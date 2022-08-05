@@ -14,7 +14,8 @@
     <img src="../../public/img/pictures/group.png" class="gruppenbild"/>
 </div>
 <div id="bildunterschrift">
-   Coding Camp 2022
+   Coding Camp 2022: Stella Mangold, Lukas Frahm, Ben Fröhlich, Carlo Meßmer, Michael Simon, Richard Martz, Eric Zeller,
+   Jeudyl Robles, Eldar Mesic, Amar Mesic
 </div>
 </template>
 
