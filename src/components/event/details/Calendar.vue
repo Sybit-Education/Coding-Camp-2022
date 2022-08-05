@@ -17,12 +17,17 @@ export default {
       const event = {
         start: [
           dateFormat.getFullYear(),
-          dateFormat.getMonth(),
-          dateFormat.getDay()
+          dateFormat.getMonth() + 1,
+          dateFormat.getDate()
         ],
         title: this.event.name,
-        description: this.event.description + `\n Zeit: ${this.event.time}`,
-        location: this.event.location,
+        description: this.event.description + '\n' +
+          `Zeit: ${this.event.time} \n` +
+          `${this.event.place ? `Ort: ${this.event.place}` : ''} \n` +
+          `${this.event.meetingSpot ? `Treffpunkt: ${this.event.meetingSpot}` : ''} \n` +
+          `${this.event.importantInfo ? `Infos: ${this.event.importantInfo}` : ''} \n` +
+          `${this.event.hostPhone ? `Telefon: ${this.event.hostPhone}` : ''} \n`,
+        location: this.event.place,
         url: this.event.hostWebsite,
         status: 'CONFIRMED',
         busyStatus: 'BUSY',
