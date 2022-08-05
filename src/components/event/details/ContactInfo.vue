@@ -29,7 +29,6 @@
         <p class="text" v-if="hostAgency[0].address">{{ hostAgency[0].address }}</p>
         <p class="text" v-else>Keine Adresse angegeben</p>
         </div>
-      <template #Footer> E-mail:ejr138juafr </template>
     </n-card>
   </n-modal>
 </template>
