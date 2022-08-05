@@ -31,7 +31,10 @@
       <div>
         <event-description :event="event" class="schriftgroese"></event-description>
       </div>
-      <event-calendar :event="event" type="info" size="small" style="margin-top: 5px" />
+      <n-button type="info" @click="buildUrl()">
+          <a style="text-decoration: none; font-size: 16px; color: white" href="" id="redirect" target="_blank">Google Maps</a>
+      </n-button>
+      <event-calendar :event="event" type="info" size="small" style="margin: 10px" />
     </n-gi>
   </n-grid>
 </template>
@@ -74,6 +77,16 @@ export default {
     const eventStore = useEventStore()
     await eventStore.fetchEventRecords()
     this.event = await eventStore.getEventById(this.eventId)
+  },
+  methods: {
+    buildUrl () {
+      console.log(this.event)
+      const url = 'https://www.google.com/maps/search/?api=1&query=' + this.event.meetingSpot
+      console.log(url)
+      var el = document.getElementById('redirect')
+      el.href = url
+      return (url)
+    }
   }
 }
 </script>
@@ -115,3 +128,4 @@ h2 {
   font-size: 17px;
 }
 </style>
+buildUrl(event-place, event-location)
